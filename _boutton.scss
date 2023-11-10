@@ -1,0 +1,18 @@
+%btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+
+.btn_1{
+    @extend %btn;
+    background-color: lighten($primary-color, 10%);
+
+}
+.btn_2{
+    @extend %btn;
+    //background-color: lighten($second-color, 10%);
+    background-color: darken($second-color, 10%);
+}

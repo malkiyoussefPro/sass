@@ -1,0 +1,68 @@
+
+L'objectif du Sass est de reduire le code
+////////////////////////////////
+//Declarations des variables
+$color-primary: #ccb6ce; 
+$color_Font : #f25151;
+////////////////////////////////
+
+    box-sizing: border-box; pour qu'il contient tout le contenu du page web.'
+    margin: 0 auto; //auto: il te mets le contenue au milieu, 0: il n y'a pas de la marge ni en haut ni en bas 
+    border: 2px solid black; c'est une bonne practique pour tester et pour voir le contenu
+    overflow: hidden; pour dissimuler tout ce qui est dehors le contenu 
+
+    margin: 0 auto; //auto: il te mets le contenue au milieu, 0: il n y'a pas de la marge ni en haut ni en bas 
+    border: 2px solid black; c'est une bonne practique pour tester et pour voir le contenu
+
+ ////////////////////////////////
+a{
+            &:hover {
+                color: $links-variabe-hover;
+            }
+        
+    }
+     c'est la même chose que:
+     a:hover{
+           
+                color: $links-variabe-hover;
+    }
+
+    ////////////////////////////////
+    le but ici c'est de ne pas repeter le code
+    on utlise le % + nom variable, et on l'appel a cette
+    variabe on utilisant le mot clè @import + + nom variable
+    lighten: c'est pour diminuer la couleur et la rendre plus claire selon 
+    le pourcentage.
+    darken: c'est pour augmenter la couleur et la rendre plus foncée selon 
+    le pourcentage.
+
+
+%btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+
+.btn_1{
+    @extend %btn;
+    background-color: lighten($primary-color, 10%);
+
+
+}
+.btn_2{
+    @extend %btn;
+    //background-color: lighten($second-color, 10%);
+    background-color: darken($second-color, 10%);
+}
+
+////////////////////////////////
+Pour mieux gerer le code on utilise cette methode de separer les fonctionalité
+d'une manière que les boutons a part les variables a par et ainsi de suite
+
+on cree le fichier on on commencons par _ + variable ex: _bouttons
+et on fait l'appel a ce fichier sans tiret bas ex : @import 'bouttons';
+////////////////////////////////
+
+a re

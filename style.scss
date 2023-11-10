@@ -1,0 +1,71 @@
+
+@import 'variables';
+@import 'boutton';
+
+%place{
+    display: flex;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    background-color: $body-color;
+    font-family: $body-font;
+    line-height: 24 px;
+}
+.showcase{
+    //background-color:$primary-color ;
+    //color: text-color($primary-color);
+    @include background-color($primary-color);
+    height: 600px;
+    padding: 20px;
+
+    nav{
+        @extend %place;
+        justify-content: space-between;
+
+        ul{
+            display: flex;
+            list-style-type: none;
+            li{
+                padding: 15px;
+                
+            }
+        }
+        a{
+            &:hover {
+                color: $links-variabe-hover;
+            }
+        }
+    }
+    //Showcase content
+    &-content{
+        height: 100%;
+        @extend %place;
+        justify-content: center;
+        img{
+            width: 70%;
+            margin: 15px 25px;
+        }
+    }
+}
+a{
+    //color: $links-color ;
+    color: text-color($primary-color);
+    text-decoration: none;
+}
+
+.container{
+    
+    max-width: 1000px;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+
+

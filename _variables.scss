@@ -1,0 +1,29 @@
+//Variables: 
+
+//--Colors
+$primary-color: green;
+$second-color: rgb(226, 160, 36);
+$heading-color: #fff;
+$links-color: $heading-color;
+$links-variabe-hover: yellow;
+$sub-heading-color: #f4f4f4;
+$body-color: #f4f4f4;
+
+//--Fonts
+$body-font : Helvetica, Arial, sans-serif;
+
+//Fonction
+@function text-color($color){
+
+    @if(lightness($color) > 70){
+        @return #333;
+
+    }@else{
+        @return #fff;
+    }
+}
+@mixin background-color($color){
+    background-color: ($color);
+    color: text-color($color);
+}
+
