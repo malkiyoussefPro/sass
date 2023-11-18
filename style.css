@@ -6,11 +6,11 @@
 }
 
 .btn_1 {
-  background-color: #00b300;
+  background-color: #87a664;
 }
 
 .btn_2 {
-  background-color: #ba8219;
+  background-color: #866a38;
 }
 
 .showcase-content, .showcase nav {
@@ -31,7 +31,7 @@ body {
 }
 
 .showcase {
-  background-color: green;
+  background-color: rgb(109, 137, 78);
   color: #fff;
   height: 600px;
   padding: 20px;
